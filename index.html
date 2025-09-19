@@ -1,0 +1,149 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css"/> 
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <nav>
+      <div class="logo"><a href="#">MB Dev<span>.</span></a></div>
+      <div class="list-darkmode-menu">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="dark-toggle" id="darkToggle">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+
+        <button class="hamburger">
+          <span class="bar"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="home">
+    <div class="container">
+      <div class="home-info">
+        <div class="left">
+          <h3>Hello, I'm</h3>
+          <h1>Monalisa Behera</h1>
+          <h4>And I'm a <span class="multiple">Fullstack developer</span></h4>
+          <!-- <p>
+            I am Monalisa Behera, a passionate Fullstack Developer with expertise in 
+            frontend and backend technologies. I love building scalable web applications 
+            using modern frameworks and databases.
+          </p> -->
+
+          <p>
+          I specialize in building modern, scalable web applications with expertise in both frontend and backend technologies. My focus is on creating efficient, user-friendly solutions that solve real-world problems.
+        </p>
+        <p>
+          I have experience with Angular, Node.js, Express, MongoDB, MySQL, PHP, and WordPress, allowing me to deliver end-to-end solutions. I enjoy turning complex challenges into simple, elegant applications.
+        </p>
+        <p>
+          I believe in clean code, intuitive design, and seamless user experiences. Collaboration, continuous learning, and staying updated with the latest technologies are key to the solutions I create.
+        </p>
+        <p>
+          Explore my portfolio to see the projects I've worked on, or get in touch if you’d like to collaborate on building innovative web solutions.
+        </p>
+          <div class="social">
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-square-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://linkedin.com/in/monalisa-behera-07035b30b/"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+          
+          <div class="btn">
+            <a href="assets/my_resume (1).pdf" target="_blank">
+              <button>Download CV</button>
+            </a>
+          </div>
+        </div>
+        <div class="right">
+          <div class="profile">
+            <img src="assets/my-pic.jpeg" alt="Monalisa Behera" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills">
+    <div class="container">
+      <h2>My Skills</h2>
+      <div class="skills-grid">
+        <div class="skill"><i class="fa-brands fa-html5"></i><h3>HTML</h3></div>
+        <div class="skill"><i class="fa-brands fa-css3-alt"></i><h3>CSS3</h3></div>
+        <div class="skill"><i class="fa-brands fa-js"></i><h3>JavaScript</h3></div>
+        <div class="skill"><i class="fa-brands fa-angular"></i><h3>Angular</h3></div>
+        <div class="skill"><i class="fa-brands fa-node-js"></i><h3>Node.js</h3></div>
+        <div class="skill"><i class="fa-solid fa-server"></i><h3>Express.js</h3></div>
+        <div class="skill"><i class="fa-solid fa-database"></i><h3>MySQL</h3></div>
+        <div class="skill"><i class="fa-solid fa-database"></i><h3>MongoDB</h3></div>
+        <div class="skill"><i class="fa-brands fa-php"></i><h3>PHP</h3></div>
+        <div class="skill"><i class="fa-brands fa-wordpress"></i><h3>WordPress</h3></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="portfolio">
+    <div class="container">
+      <h2>My Projects</h2>
+      <div class="portfolio-grid">
+        <div class="project">
+          <img src="assets/project-1.jpg" alt="Project 1">
+          <h3>Online Bookstore Management System</h3>
+          <p>Built with Angular + Express + Node + MongoDB</p>
+        </div>
+        <div class="project">
+          <img src="assets/project-2.jpg" alt="Project 2">
+          <h3>Pizza Sales Report using SQL</h3>
+          <p>MySQL + Excel + Canva</p>
+        </div>
+        <div class="project">
+          <img src="assets/project-3.png" alt="Project 3">
+          <h3>Ecommerce Sales Dashboard</h3>
+          <p>Excel + PowerBI</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <h2>Contact Me</h2>
+    <p>Feel free to reach out for collaborations or just a friendly hello 👋</p>
+
+    <form id="myForm">
+      <div class="form-row">
+        <input type="text" id="username" placeholder="Your Name" required>
+        <span class="error" id="usernameError"></span>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <span class="error" id="emailError"></span>
+      </div>
+      <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+      <span class="error" id="messageError"></span>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <script src="custom.js"></script>
+</body>
+</html>

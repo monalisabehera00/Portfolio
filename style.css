@@ -1,0 +1,353 @@
+/* ---------------- Root Variables ---------------- */
+:root {
+  --first: #111;
+  --second: #fff;
+  --color: #ff6600;
+  --bg: #f9f9f9;
+}
+
+/* ---------------- Global Reset ---------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: var(--bg);
+  color: var(--first);
+  line-height: 1.6;
+}
+
+/* ---------------- Navbar ---------------- */
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: var(--second);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap; 
+  gap: 1rem;
+}
+/* the right-hand group that contains UL + toggle + hamburger */
+.list-darkmode-menu {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: nowrap;    /* prevent the menu from wrapping to next line */
+}
+/* ensure the UL stays horizontal and doesn't wrap */
+.list-darkmode-menu ul {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+  flex-wrap: nowrap;
+}
+
+.logo a {
+  font-size: 32px;
+  font-weight: 600;
+  /* color: var(--first); */
+  color: var(--color); /* changed to --color */
+}
+
+.logo a span {
+  color: var(--color);
+}
+
+.list-darkmode-menu ul {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.list-darkmode-menu ul li a {
+  color: var(--first);
+  font-size: 18px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.list-darkmode-menu ul li a:hover {
+  color: var(--color);
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background: var(--first);
+  transition: 0.3s;
+}
+
+/* ---------------- Hero Section ---------------- */
+.home {
+  padding: 120px 20px 60px;
+  background: var(--second);
+}
+
+.home-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.home-info .left h3 {
+  font-size: 20px;
+  color: var(--color);
+}
+
+.home-info .left h1 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.home-info .left h4 {
+  font-size: 22px;
+  margin: 10px 0;
+}
+
+.home-info .left p {
+  margin: 20px 0;
+  max-width: 500px;
+  line-height: 1.6;
+}
+
+.home-info .social a {
+  margin-right: 10px;
+  font-size: 30px;
+  color: var(--first);
+  transition: 0.3s;
+}
+
+.home-info .social a:hover {
+  color: var(--color);
+}
+
+.home-info .btn button {
+  padding: 10px 20px;
+  border: none;
+  background: var(--color);
+  color: #fff;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.home-info .btn button:hover {
+  background: #e05500;
+}
+
+.home-info .right .profile img {
+  width: 450px;
+  height: 450px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 50%;
+  border: 3px solid var(--color);
+  box-shadow: 0 0 40px var(--color);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+/* ---------------- Skills ---------------- */
+.skills {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.skills h2 {
+  margin-bottom: 40px;
+  font-size: 32px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 2rem;
+}
+
+.skill {
+  padding: 20px;
+  background: var(--second);
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.skill i {
+  font-size: 40px;
+  margin-bottom: 10px;
+  color: var(--color);
+}
+
+.skill:hover {
+  transform: translateY(-5px);
+}
+
+/* ---------------- Portfolio ---------------- */
+.portfolio {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.portfolio h2 {
+  margin-bottom: 40px;
+  font-size: 32px;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.project {
+  background: var(--second);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.project img {
+  width: 100%;
+  display: block;
+}
+
+.project h3 {
+  margin: 15px 0 10px;
+  font-size: 20px;
+}
+
+.project p {
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* ---------------- Contact ---------------- */
+.contact {
+  padding: 80px 20px;
+  text-align: center;
+  background: var(--second);
+}
+
+.contact h2 {
+  margin-bottom: 20px;
+  font-size: 32px;
+}
+
+.contact p {
+  margin-bottom: 30px;
+  color: #555;
+}
+
+form {
+  max-width: 600px;
+  margin: auto;
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 20px;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+form button {
+  padding: 12px 25px;
+  border: none;
+  background: var(--color);
+  color: #fff;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+form button:hover {
+  background: #e05500;
+}
+
+/* ---------------- Responsive ---------------- */
+@media (max-width: 768px) {
+  .home-info {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .home-info .right img {
+    width: 300px;
+    height: 300px;
+  }
+
+  .list-darkmode-menu ul {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+/* ---------------- Dark Mode ---------------- */
+body.dark-mode {
+  --first: #f5f5f5;
+  --second: #1e1e1e;
+  --bg: #121212;
+  --color: #ff9900;
+}
+
+.dark-toggle {
+  display: inline-flex;
+  justify-content: center;
+  background: none;
+  border: 2px solid var(--first);
+  border-radius: 50%;
+  padding: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  color: var(--first);
+  transition: 0.3s;
+}
+
+.dark-toggle:hover {
+  background: var(--first);
+  color: var(--second);
+}
